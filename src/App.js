@@ -1,10 +1,22 @@
 import React from "react";
+import Header from "./components/Header";
+import './App.css'
+import Pizza from "./components/Pizza";
+import Boyut from "./components/Boyut";
+import Form from "./components/Form";
+import * as Yup from "yup";
+import { Link } from "react-router-dom";
 
 const App = () => {
   return (
     <>
-      <h1>Teknolojik Yemekler</h1>
-      <p>Burdaki kodu silip kendi headerınızı ekleyebilirsiniz</p>
+      <div className="order-page">
+        <div className="order-page-content">
+          <Header></Header>
+          <Pizza></Pizza>
+          <Form></Form>
+        </div>
+      </div>
     </>
   );
 };

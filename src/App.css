@@ -1,38 +1,246 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+:root {
+  --yellow: #FDC913;
+  --lightgray: #5F5F5F;
+  --darkgray: #292929;
+  --red: #CE2829;
+  --beige: #FAF7F2;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  overflow-x: hidden;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.order-page {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.order-page-content {
+  width: 600px;
+}
+
+.header-bg {
+  background-color: var(--red);
+  height: 220px;
+  z-index: -1;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
   color: white;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.header-title {
+  font-family: 'Satisfy', cursive;
+  font-size: 25px;
+  align-self: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.pizza {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.pizza-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.pizza-info h2 {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.pizza-info h3 {
+  font-size: 30px;
+}
+
+.pizza-info p {
+  color: var(--lightgray);
+  font-size: 18px;
+}
+
+.row {
+  display: flex;
+  gap: 10rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin-top: 4rem;
+}
+
+form h4 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.boyut {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+
+.boyut .radio-line {
+  color: var(--lightgray);
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+  gap: 1rem;
+}
+
+.hamurtipi {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.hamurtipi select {
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.ekmalzemeler {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 800px;
+}
+
+.ekmalzemeler p {
+  color: var(--lightgray);
+  font-weight: 600;
+}
+
+.ekmalzemeler-inputs {
+  display: flex;
+  width: 400px;
+  justify-content: space-between;
+}
+
+.ekmalzemeler-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.ekmalzemeler-input {
+  display: flex;
+  gap: 1rem;
+  font-weight: 700;
+  color: var(--lightgray)
+}
+
+.siparisnotu {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.siparisnotu input {
+  width: 100%;
+  border-radius: 5px;
+  padding: 1rem;
+  border: 1px solid lightgray;
+}
+
+.siparisver {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 5rem;
+}
+
+.siparisver h4 {
+  padding: 30px 40px 0 40px;
+}
+
+.siparisver .adet {
+  display: flex;
+  align-items: center;
+}
+
+.siparisver .reduce, .increase {
+  background-color: var(--yellow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.siparisver .quantity {
+  border: 1px solid lightgray;
+  width: 40px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 -2px;
+  z-index: -1;
+}
+
+.siparisver .checkout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  width: 350px;
+  gap: 1rem;
+}
+
+.siparisver .secimler, .toplam {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 40px 0 40px;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.siparisver .secimler {
+  color: var(--lightgray);
+}
+
+.siparisver .toplam {
+  color: var(--red);
+}
+
+.siparisver input[type=submit] {
+  background-color: var(--yellow);
+  font-weight: 700;
+  font-size: 17px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  height: 50px;
+  margin-top: 20px;
+  color: var(--darkgray);
 }
