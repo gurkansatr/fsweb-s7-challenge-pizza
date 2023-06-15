@@ -1,23 +1,20 @@
 import React from "react";
-import Header from "./components/Header";
 import './App.css'
-import Pizza from "./components/Pizza";
-import Boyut from "./components/Boyut";
-import Form from "./components/Form";
-import * as Yup from "yup";
-import { Link } from "react-router-dom";
+import Home from "./pages/Home"
+import OrderPizza from "./pages/OrderPizza"
+import Success from "./pages/Success"
+import { Route } from 'react-router-dom';
+import { BrowserRouter as Router } from "react-router-dom";
+
 
 const App = () => {
   return (
-    <>
-      <div className="order-page">
-        <div className="order-page-content">
-          <Header></Header>
-          <Pizza></Pizza>
-          <Form></Form>
-        </div>
-      </div>
-    </>
+      <Router>
+        <Route path="/home" component={Home} />
+        <Route path="/orderpizza" component={OrderPizza} />
+        <Route path="/success" component={Success} />
+      </Router>
   );
 };
+
 export default App;

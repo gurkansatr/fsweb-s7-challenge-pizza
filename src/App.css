@@ -40,6 +40,10 @@ body {
   left: 0;
 }
 
+.header-nav a{
+  color: white;
+  text-decoration: none;
+}
 .header {
   display: flex;
   flex-direction: column;
@@ -243,4 +247,75 @@ form h4 {
   height: 50px;
   margin-top: 20px;
   color: var(--darkgray);
+  cursor: pointer;
+}
+
+.home-page {
+  background: url(./assets/mvp-banner.png);
+  height: 100vh;
+  width: 100vw;
+}  
+
+.home-page-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 50vh;
+  gap: 2rem;
+  padding-top: 10rem;
+}
+
+.home-page h1 {
+  color: white;
+  font-family: 'Satisfy', cursive;
+  font-size: 70px;
+}
+
+.home-page p {
+  color: white;
+  font-size: 80px;
+  font-weight: 100;
+  text-align: center;
+  line-height: 100px;
+}
+
+.home-page a {
+  color: black;
+  background-color: var(--yellow);
+  border-radius: 30px;
+  padding: 15px 70px;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.success-page {
+  background-color: var(--red);
+  height: 100vh;
+  width: 100vw;
+}
+
+.success-page-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  gap: 15rem;
+  padding-top: 5rem;
+}
+
+.success-page-content h1 {
+  font-family: 'Satisfy', cursive;
+
+  font-size: 60px;
+}
+
+.success-page-content p {
+  font-size: 60px;
+  font-weight: 200;
+  text-transform: uppercase;
+
 }

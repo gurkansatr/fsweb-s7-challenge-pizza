@@ -20,11 +20,6 @@ const EkMalzemeler = ({ malzemeSayisi }) => {
         }
     }
 
-    useEffect(() => {
-        console.log(ekMalzeme)
-        console.log(malzemeler)
-    }, [ekMalzeme, malzemeler])
-    
     const malzemeListFirstColumn = [
         {
             "adi": "Pepperoni",
@@ -46,7 +41,53 @@ const EkMalzemeler = ({ malzemeSayisi }) => {
             "adi": "Soğan",
             "name": "Sogan"
         }
+        
     ]
+    const malzemeListSecondColumn = [
+        {
+            "adi": "Domates",
+            "name": "Domates"
+        },
+        {
+            "adi": "Mısır",
+            "name": "Misir"
+        },
+        {
+            "adi": "Sucuk",
+            "name": "Sucuk"
+        },
+        {
+            "adi": "Jalapeno",
+            "name": "Jalapeno"
+        },
+        {
+            "adi": "Sarımsak",
+            "name": "Sarimsak"
+        }
+        
+    ]
+    const malzemeListThirdColumn = [
+        {
+            "adi": "Biber",
+            "name": "Biber"
+        },
+        {
+            "adi": "Sucuk",
+            "name": "Sucuk"
+        },
+        {
+            "adi": "Ananas",
+            "name": "Ananas"
+        },
+        {
+            "adi": "Kabak",
+            "name": "Kabak"
+        },
+        
+    ]
+    useEffect(()=>{
+
+    })
 
     return (
         <div className="ekmalzemeler">
@@ -62,45 +103,22 @@ const EkMalzemeler = ({ malzemeSayisi }) => {
                     )}
                 </div>
                 <div className="ekmalzemeler-column">
-                    <div className="ekmalzemeler-input">
-                        <input type="checkbox" id="Domates" name="Domates" onChange={handleChange}></input>
-                        <label for="Domates">Domates</label>
-                    </div>
-                    <div className="ekmalzemeler-input">
-                        <input type="checkbox" id="Misir" name="Misir" onChange={handleChange}></input>
-                        <label for="Misir">Mısır</label>
-                    </div>
-                    <div className="ekmalzemeler-input">
-                        <input type="checkbox" id="Sucuk" name="Sucuk" onChange={handleChange}></input>
-                        <label for="Sucuk">Sucuk</label>
-                    </div>
-                    <div className="ekmalzemeler-input">
-                        <input type="checkbox" id="Jalapeno" name="Jalapeno" onChange={handleChange}></input>
-                        <label for="Jalapeno">Jalapeno</label>
-                    </div>
-                    <div className="ekmalzemeler-input">
-                        <input type="checkbox" id="Sarimsak" name="Sarimsak" onChange={handleChange}></input>
-                        <label for="Sarimsak">Sarımsak</label>
-                    </div>
+                    {malzemeListSecondColumn.map((malzeme) =>
+                        <div className="ekmalzemeler-input">
+                            <input type="checkbox" id={malzeme.name} name={malzeme.name} onChange={handleChange}></input>
+                            <label for={malzeme.name}>{malzeme.adi}</label>
+                        </div>
+                    )}
                 </div>
                 <div className="ekmalzemeler-column">
-                    <div className="ekmalzemeler-input">
-                        <input type="checkbox" id="Biber" name="Biber" onChange={handleChange}></input>
-                        <label for="Biber">Biber</label>
-                    </div>
-                    <div className="ekmalzemeler-input">
-                        <input type="checkbox" id="Sucuk2" name="Sucuk2" onChange={handleChange}></input>
-                        <label for="Sucuk2">Sucuk</label>
-                    </div>
-                    <div className="ekmalzemeler-input">
-                        <input type="checkbox" id="Ananas" name="Ananas" onChange={handleChange}></input>
-                        <label for="Ananas">Ananas</label>
-                    </div>
-                    <div className="ekmalzemeler-input">
-                        <input type="checkbox" id="Kabak" name="Kabak" onChange={handleChange}></input>
-                        <label for="Kabak">Kabak</label>
-                    </div>
+                    {malzemeListThirdColumn.map((malzeme) =>
+                        <div className="ekmalzemeler-input">
+                            <input type="checkbox" id={malzeme.name} name={malzeme.name} onChange={handleChange}></input>
+                            <label for={malzeme.name}>{malzeme.adi}</label>
+                        </div>
+                    )}
                 </div>
+                
             </div>
         </div>
     )

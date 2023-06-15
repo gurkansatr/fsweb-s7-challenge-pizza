@@ -11,15 +11,19 @@ const Boyut = (props) => {
         <h4>Boyut Seç <span style={{ color: "red" }}>*</span> </h4>
         <div className="radio-line">
           <input type="radio" id="kucuk" name="boyut"></input>
-          <label for="kucuk">Küçük</label>
+          <label htmlFor="kucuk">Küçük</label>
         </div>
         <div className="radio-line">
-          <input type="radio" id="orta" name="boyut"></input>
-          <label for="orta">Orta</label>
+          <input 
+          type="radio" 
+          id="orta" 
+          name="boyut"
+          ></input>
+          <label htmlFor="orta">Orta</label>
         </div>
         <div className="radio-line">
           <input type="radio" id="buyuk" name="boyut"></input>
-          <label for="buyuk">Büyük</label>
+          <label htmlFor="buyuk">Büyük</label>
         </div>
       </div>
     </>
