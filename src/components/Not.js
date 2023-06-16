@@ -23,7 +23,7 @@ const Not = ({siparisNotu}) => {
         <div className="siparisnotu">
             <h4>Sipariş Notu</h4>
             <input name="isim" type="text" id="name-input" placeholder="Lütfen isminizi giriniz." onChange={(e)=>inputChange(e)}></input>
-            <input type="text" name="not" id="not" placeholder="Siparişine eklemek istediğin bir not var mı?"></input>
+            <input type="text" name="not" id="special-text" placeholder="Siparişine eklemek istediğin bir not var mı?"></input>
             <hr></hr>
         </div>
     )
