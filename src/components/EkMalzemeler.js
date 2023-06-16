@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 const EkMalzemeler = (props) => {
-    const [ekMalzeme, setEkMalzeme] = useState(props.EkMalzemeler);
+    const [ekMalzeme, setEkMalzeme] = useState(0);
     const [malzemeler, setMalzemeler] = useState([]);
 
     const handleChange = (event) => {

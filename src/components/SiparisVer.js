@@ -39,7 +39,7 @@ siparisTotal()
     const click = (e) => {
         e.preventDefault();
         console.log(props)
-        //window.location.replace("/success")
+        window.location.replace("/success")
     }
     return (
         <div className="siparisver">
