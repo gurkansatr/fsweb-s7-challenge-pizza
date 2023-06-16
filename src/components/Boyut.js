@@ -14,15 +14,15 @@ const Boyut = ({boyut}) => {
         <h4>Boyut Seç <span style={{ color: "red" }}>*</span> </h4>
         <div className="radio-line">
           <input type="radio" id="kucuk" name="boyut" value={"kucuk"} onChange={onSizeChanged}></input>
-          <label for="kucuk">Küçük</label>
+          <label htmlFor="kucuk">Küçük</label>
         </div>
         <div className="radio-line">
           <input type="radio" id="orta" name="boyut" value={"orta"} onChange={onSizeChanged}></input>
-          <label for="orta">Orta</label>
+          <label htmlFor="orta">Orta</label>
         </div>
         <div className="radio-line">
           <input type="radio" id="buyuk" name="boyut" value={"buyuk"} onChange={onSizeChanged}></input>
-          <label for="buyuk">Büyük</label>
+          <label htmlFor="buyuk">Büyük</label>
         </div>
       </div>
     </>

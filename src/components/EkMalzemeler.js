@@ -100,7 +100,7 @@ const EkMalzemeler = (props) => {
                     {malzemeListFirstColumn.map((malzeme) =>
                         <div className="ekmalzemeler-input">
                             <input type="checkbox" id={malzeme.name} name={malzeme.name} onChange={handleChange}></input>
-                            <label for={malzeme.name}>{malzeme.adi}</label>
+                            <label htmlFor={malzeme.name}>{malzeme.adi}</label>
                         </div>
                     )}
                 </div>
@@ -108,7 +108,7 @@ const EkMalzemeler = (props) => {
                     {malzemeListSecondColumn.map((malzeme) =>
                         <div className="ekmalzemeler-input">
                             <input type="checkbox" id={malzeme.name} name={malzeme.name} onChange={handleChange}></input>
-                            <label for={malzeme.name}>{malzeme.adi}</label>
+                            <label htmlFor={malzeme.name}>{malzeme.adi}</label>
                         </div>
                     )}
                 </div>
@@ -116,7 +116,7 @@ const EkMalzemeler = (props) => {
                     {malzemeListThirdColumn.map((malzeme) =>
                         <div className="ekmalzemeler-input">
                             <input type="checkbox" id={malzeme.name} name={malzeme.name} onChange={handleChange}></input>
-                            <label for={malzeme.name}>{malzeme.adi}</label>
+                            <label htmlFor={malzeme.name}>{malzeme.adi}</label>
                         </div>
                     )}
                 </div>
