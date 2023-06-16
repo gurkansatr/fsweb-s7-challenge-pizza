@@ -7,7 +7,7 @@ const Home = (props) => {
             <div className="home-page-content">
                 <h1>Teknolojik Yemekler</h1>
                 <p>KOD ACIKTIRIR <br></br> PIZZA, DOYURUR</p>
-                <Link to="/orderpizza">ACIKTIM</Link>
+                <Link to="/pizza">ACIKTIM</Link>
             </div>
         </div>
     )

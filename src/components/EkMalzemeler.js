@@ -1,19 +1,21 @@
 import React, { useEffect, useState } from "react";
 
-const EkMalzemeler = ({ malzemeSayisi }) => {
-    const [ekMalzeme, setEkMalzeme] = useState(0);
+const EkMalzemeler = (props) => {
+    const [ekMalzeme, setEkMalzeme] = useState(props.EkMalzemeler);
     const [malzemeler, setMalzemeler] = useState([]);
 
     const handleChange = (event) => {
         if (malzemeler.length < 10) {
             if (event.target.checked) {
-                setEkMalzeme(ekMalzeme + 5);
+                setEkMalzeme(ekMalzeme + 1);
                 setMalzemeler([...malzemeler, event.target.name]);
-                malzemeSayisi(ekMalzeme);
+                props.malzemeSayisi(ekMalzeme);
+                props.secilenMalzemeler.push([...malzemeler, event.target.name]);
             } else {
-                setEkMalzeme(ekMalzeme - 5);
+                setEkMalzeme(ekMalzeme - 1);
                 setMalzemeler(malzemeler.filter(a => a !== event.target.name));
-                malzemeSayisi(ekMalzeme);
+                props.malzemeSayisi(ekMalzeme);
+                props.secilenMalzemeler.pop([...malzemeler, event.target.name]);
             }
         } else {
             event.target.checked = false;
@@ -87,7 +89,7 @@ const EkMalzemeler = ({ malzemeSayisi }) => {
     ]
     useEffect(()=>{
 
-    })
+    },[])
 
     return (
         <div className="ekmalzemeler">

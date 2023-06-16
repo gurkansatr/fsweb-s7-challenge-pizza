@@ -1,7 +1,25 @@
 import React, { useEffect, useState } from "react";
 
-const SiparisVer = (props) => {
 
+const SiparisVer = (props) => {
+const [adetliToplam,setAdetliToplam]= useState(0);
+const [toplam,setToplam] = useState(0)
+const [malzemeToplam,setMalzemeToplam]= useState(0)
+const malzemeTotal = ()=>{
+setMalzemeToplam(props.secilenMalzemeler.length*5)
+}
+const siparisTotal = ()=>{
+    if(adet == 1){
+        setToplam(props.pFiyat+malzemeToplam)
+        
+    }else{
+       
+        setToplam((props.pFiyat+malzemeToplam)*adet)
+       
+    }
+
+
+}
     function adetAzalt() {
         if (adet > 1) {
             setAdet(adet -1);
@@ -13,10 +31,16 @@ const SiparisVer = (props) => {
     }
 
     const [adet, setAdet] = useState(1);
-    console.log(props)
+   
     useEffect(()=> {
-
-    },[props.malzemeSayisi])
+malzemeTotal()
+siparisTotal()
+    },[props.malzemeSayisi,siparisTotal])
+    const click = (e) => {
+        e.preventDefault();
+        console.log(props)
+        //window.location.replace("/success")
+    }
     return (
         <div className="siparisver">
             <div className="adet">
@@ -28,13 +52,13 @@ const SiparisVer = (props) => {
                 <h4>Sipariş Toplamı</h4>
                 <div className="secimler">
                     <p>Seçimler</p>
-                    <span>{props.malzemeSayisi}.00₺</span>
+                    <span>{malzemeToplam}.00₺</span>
                 </div>
                 <div className="toplam">
                     <p>Toplam</p>
-                    <span>{props.toplam}.50₺</span>
+                    <span>{toplam}₺</span>
                 </div>
-                <input type="submit" id="order-button" value="SİPARİŞ VER"></input>
+                <input type="submit" id="order-button" value="SİPARİŞ VER" onClick={e=> {click(e)}}></input>
             </div>
         </div>
     )

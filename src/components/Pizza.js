@@ -1,14 +1,11 @@
-import React, { useState } from "react";
-import Boyut from "./Boyut";
-import EkMalzemeler from "./EkMalzemeler";
-import Form from "./Form";
+import React, { useEffect, useState } from "react";
 
 
-const Pizza = (props) => {
-    const [title, setTitle] = useState()
-    const [price, setPrice] = useState('85.50')
-    const [hamurTipi, setHamurTipi] = useState()
 
+const Pizza = ({pizzaFiyat}) => {
+    const [price, setPrice] = useState(85.50)
+   
+    pizzaFiyat(price)
 
     return (
         <>

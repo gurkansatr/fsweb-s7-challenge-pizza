@@ -95,7 +95,7 @@ form {
   display: flex;
   flex-direction: column;
   gap: 4rem;
-  margin-top: 4rem;
+  margin-top: 0
 }
 
 form h4 {

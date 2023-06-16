@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import { BrowserRouter as Link } from "react-router-dom";
 
 const Header = (props) => {
     return (
@@ -10,7 +10,7 @@ const Header = (props) => {
                 <h1>Teknolojik Yemekler</h1>
             </div>
             <div className="header-nav">
-                <Link to="/home"><p>Anasayfa - Seçenekler - <span style={{ fontWeight: '700' }}>Sipariş Oluştur</span></p></Link>
+                <Link to="/">Anasayfa  </Link> - <Link to="/">  Seçenekler </Link> - <Link to="#"><span style={{ fontWeight: '700' }}>Sipariş Oluştur</span></Link>
             </div>
         </div>
         </>
